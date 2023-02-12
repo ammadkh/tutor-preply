@@ -1,0 +1,17 @@
+{
+    "gender": {
+        "0": "None",
+        "1": "Male",
+        "2": "Female"
+    },
+    "ethnicity": {
+        "0": "None",
+        "1": "Korean",
+        "2": "Chinese",
+        "3": "Japanese",
+        "4": "African",
+        "5": "White",
+        "6": "Black",
+        "7": "Others"
+    }
+}

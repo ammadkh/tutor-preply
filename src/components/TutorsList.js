@@ -40,7 +40,7 @@ export default function TutorsList() {
     });
   }, [tutors]);
 
-  if (!tutors.length) {
+  if (!isLoading && !tutors.length) {
     return (
       <div
         style={{

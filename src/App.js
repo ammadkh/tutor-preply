@@ -6,7 +6,7 @@ import { storeData } from "./services/tutorService";
 
 function App() {
   useEffect(() => {
-    //storeData(); to store data on firestore
+    // storeData(); //to store data on firestore
   }, []);
   return (
     <TutorProvider>

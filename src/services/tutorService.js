@@ -17,7 +17,7 @@ import {
 import usersData from "../utils/users.json";
 
 export const storeData = () => {
-  const users = usersData;
+  const users = usersData.slice(0, 100); // store only 100 tutors in firestore
   const app = getFirebaseApp();
   var db = getFirestore(app);
 

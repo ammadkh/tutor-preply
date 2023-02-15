@@ -40,5 +40,8 @@ code {
   .textDesc {
     height: 62px !important;
   }
+  .textDescAuto {
+    height: auto !important;
+  }
 }
 

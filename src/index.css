@@ -35,7 +35,7 @@ code {
     gap: 20px
   }
   .totalPages {
-    justify-content: center;
+    justify-content: center !important;
   }
 }
 

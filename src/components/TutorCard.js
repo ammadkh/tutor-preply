@@ -42,7 +42,7 @@ export default function TutorCard({ tutor }) {
   return (
     <div>
       <Grid container spacing={2} marginY={2}>
-        <Grid item xs={6.5} sx={{ margin: "auto" }}>
+        <Grid item xs={10} sm={10} md={6.5} sx={{ margin: "auto" }}>
           <Card
             sx={{
               minWidth: 275,
@@ -52,8 +52,8 @@ export default function TutorCard({ tutor }) {
               boxShadow: "none",
             }}
           >
-            <Grid container style={{ justifyContent: "center" }}>
-              <Grid item xs={2.6}>
+            <Grid container className="content">
+              <Grid item sm={12} md={2.6}>
                 <img
                   src={tutor?.thumbnail_img_url}
                   style={{ borderRadius: 15 }}
@@ -61,7 +61,7 @@ export default function TutorCard({ tutor }) {
                   alt=""
                 />
               </Grid>
-              <Grid item xs={6} sx={{}}>
+              <Grid item sm={12} md={6} sx={{ marginLeft: "15px" }}>
                 <span
                   onClick={() => handleClickOpen("tutor_name")}
                   style={{ fontWeight: 800, fontSize: 18, marginRight: 10 }}
@@ -188,7 +188,7 @@ export default function TutorCard({ tutor }) {
                     fontSize: "13px",
                     marginTop: "10px",
                     color: "grey",
-                    height: isExpand ? "auto" : "60px",
+                    height: isExpand ? "auto" : "70px",
                     overflow: "hidden",
                   }}
                   onClick={() => handleClickOpen("description")}
@@ -212,7 +212,8 @@ export default function TutorCard({ tutor }) {
               </Grid>
               <Grid
                 item
-                xs={3}
+                sm={12}
+                md={3}
                 sx={{
                   display: "flex",
                   flexDirection: "column",
@@ -224,7 +225,7 @@ export default function TutorCard({ tutor }) {
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    width: "80%",
+                    width: "100%",
                   }}
                 >
                   {tutor?.is_newly_joined && (
@@ -315,39 +316,41 @@ export default function TutorCard({ tutor }) {
                     </div>
                   </div>
                 </div>
-
-                <Button
-                  variant="contained"
-                  sx={{
-                    minWidth: "80%",
-                    fontSize: "15px",
-                    padding: "12px 10px",
-                    lineHeight: "auto",
-                    borderRadius: "10px",
-                    textTransform: "none",
-                    backgroundColor: "#0096b2",
-                    fontWeight: "600",
-                    marginBottom: "15px",
-                  }}
-                >
-                  Book trial lesson
-                </Button>
-                <Button
-                  variant="contained"
-                  sx={{
-                    minWidth: "80%",
-                    fontSize: "15px",
-                    padding: "12px 10px",
-                    lineHeight: "auto",
-                    borderRadius: "10px",
-                    textTransform: "none",
-                    backgroundColor: "#f7f5f2",
-                    fontWeight: "600",
-                    color: "black",
-                  }}
-                >
-                  Message
-                </Button>
+                <div style={{ width: "90%" }}>
+                  <Button
+                    variant="contained"
+                    sx={{
+                      minWidth: "100%",
+                      fontSize: "15px",
+                      padding: "12px 10px",
+                      lineHeight: "auto",
+                      borderRadius: "10px",
+                      textTransform: "none",
+                      backgroundColor: "#0096b2",
+                      fontWeight: "600",
+                      marginBottom: "15px",
+                    }}
+                  >
+                    Book trial lesson
+                  </Button>
+                  <Button
+                    block
+                    variant="contained"
+                    sx={{
+                      minWidth: "100%",
+                      fontSize: "15px",
+                      padding: "12px 10px",
+                      lineHeight: "auto",
+                      borderRadius: "10px",
+                      textTransform: "none",
+                      backgroundColor: "#f7f5f2",
+                      fontWeight: "600",
+                      color: "black",
+                    }}
+                  >
+                    Message
+                  </Button>
+                </div>
               </Grid>
               {isEditMode && <DynamicDropdowns tutor={tutor} />}
             </Grid>

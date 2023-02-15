@@ -12,3 +12,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.dynamicDropdown {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 5px 0 5px
+}
+
+.content {
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .dynamicDropdown {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px !important;
+  }
+  .content {
+    gap: 20px
+  }
+  .totalPages {
+    justify-content: center;
+  }
+}
+

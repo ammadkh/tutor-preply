@@ -18,14 +18,13 @@ export default function DynamicDropdowns({ tutor }) {
   };
 
   return (
-    <Grid item xs={12} style={{ display: "flex", margin: "20px 5px 0 5px" }}>
+    <Grid item xs={6} md={12} className="dynamicDropdown" gap={2}>
       {Object.keys(dropdownData).map((key, index) => {
         return (
           <div
             key={index}
             style={{
               textAlign: "start",
-              marginRight: "15px",
             }}
           >
             {tutor && (

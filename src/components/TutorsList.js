@@ -81,14 +81,13 @@ export default function TutorsList() {
   }
   return (
     <div>
-      <Grid
-        container
-        marginY={5}
-        justifyContent="center"
-        marginBottom={0}
-        marginLeft={"-20px"}
-      >
-        <Grid item xs={7} style={{ textAlign: "end", marginTop: "30px" }}>
+      <Grid container marginY={5} justifyContent="center" marginBottom={0}>
+        <Grid
+          item
+          xs={12}
+          md={7}
+          style={{ textAlign: "end", marginTop: "30px" }}
+        >
           <div style={{ marginRight: "50px" }}>
             <Checkbox
               label="Edit Mode"
@@ -98,7 +97,7 @@ export default function TutorsList() {
             <span>Edit Mode</span>
           </div>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={10} md={6}>
           <h4 style={{ marginBottom: 0 }}>
             {totalTutors} English teachers available
           </h4>
@@ -111,6 +110,7 @@ export default function TutorsList() {
           xs={6.5}
           justifyContent={"end"}
           display="flex"
+          className="totalPages"
           sx={{ fontSize: "14px", color: "grey" }}
         >
           <p>Total number of pages {Math.floor(totalTutors / 10)}</p>

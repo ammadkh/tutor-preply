@@ -241,6 +241,7 @@ export default function TutorCard({ tutor }) {
                         color: "#017912",
                         display: "flex",
                         alignItems: "center",
+                        justifyContent: "center",
                       }}
                     >
                       Newly joined

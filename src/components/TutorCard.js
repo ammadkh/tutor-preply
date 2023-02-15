@@ -191,6 +191,7 @@ export default function TutorCard({ tutor }) {
                     height: isExpand ? "auto" : "70px",
                     overflow: "hidden",
                   }}
+                  className="textDesc"
                   onClick={() => handleClickOpen("description")}
                 >
                   {tutor?.description}

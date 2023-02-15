@@ -37,5 +37,8 @@ code {
   .totalPages {
     justify-content: center !important;
   }
+  .textDesc {
+    height: 62px !important;
+  }
 }
 
